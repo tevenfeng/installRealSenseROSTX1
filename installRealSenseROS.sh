@@ -69,6 +69,8 @@ git checkout v1.11.0
 # git checkout 74ff66da50210e6b9edc3157411bad95c209740f
 # Patches uvc-v4l2.cpp to avoid crash; removes -sse flag from .pro file 
 patch -p1 -i $INSTALL_DIR/patches/arm.patch
+# Patch the uvcvideo internal module fix
+patch -p1 -i $INSTALL_DIR/patches/uvc-v4l2.patch
 # Patch the ROS package file to not include the Linux kernel 4.4 headers
 patch -i $INSTALL_DIR/patches/linuxheaders.patch
 # Copy over the udev rules so that camera can be run from user space
